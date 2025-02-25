@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background-color: #060606;
+  background-color: #0c0c0c;
 }
 
 h1 {
@@ -38,7 +38,7 @@ p {
   font-size: 20px;
   font-weight: 700;
   line-height: 27px;
-  color: #060606;
+  color: #0c0c0c;
   text-decoration: none;
   border: none;
   padding: 25px 60px;
@@ -74,6 +74,7 @@ p {
 
 html body {
   overflow-x: hidden;
+  background-color: #0c0c0c;
 }
 
 .left-fixed {
@@ -85,6 +86,7 @@ html body {
   height: 100vh;
   width: 350px;
   text-align: center;
+  z-index: 99999;
 }
 .left-fixed .logo {
   padding: 64px 32px;
@@ -137,44 +139,141 @@ html body {
 }
 
 .right-main {
-  background-image: url(assets/Images/Hero\ Background.png);
-  min-height: 100vh;
   width: calc(100% - 350px);
   margin-left: auto;
   display: flex;
-  padding: 0 10%;
-  align-items: center;
+  flex-direction: column;
+  background-image: url(assets/Images/Hero\ Background.png);
+  background-position: top;
+  background-repeat: no-repeat;
 }
-.right-main .hero {
+.right-main section {
+  padding: 100px 8%;
+  max-width: 1420px;
+}
+.right-main .hero-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.right-main .hero-section .hero-content {
   max-width: 900px;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.right-main .hero span {
+.right-main .hero-section span {
   color: #5cff6f;
 }
-.right-main .hero .buttons {
+.right-main .hero-section .buttons {
   display: flex;
   gap: 64px;
   margin: 32px 0;
 }
-.right-main .hero .socials {
+.right-main .hero-section .socials {
   display: flex;
   gap: 64px;
   align-items: center;
 }
-.right-main .hero .socials .social-icon {
+.right-main .hero-section .socials .social-icon {
   padding: 14px;
-  background-color: #060606;
+  background-color: #0c0c0c;
   border: 1px solid #bababa;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.right-main .hero .socials .social-icon img {
+.right-main .hero-section .socials .social-icon img {
   width: 40px;
   height: 40px;
 }
-.right-main .hero .socials .social-icon:hover {
+.right-main .hero-section .socials .social-icon:hover {
   background-color: #1c1c1c;
+  transform: scale(0.95);
+}
+.right-main .about-section {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  margin-top: 200px;
+}
+.right-main .about-section .about-right-content p span {
+  color: #5cff6f;
+  font-weight: 700;
+}
+.right-main .about-section .about-right-content a {
+  display: inline-block;
+  color: #5cff6f;
+  margin-top: 64px;
+  font-size: 22px;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+.right-main .about-section .about-right-content a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #5cff6f;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.right-main .about-section .about-right-content a:hover:before {
+  width: 100%;
+}
+.right-main .about-section .about-right-content a:hover {
+  color: #0c0c0c;
+}
+.right-main .animated-section {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #222222;
+  border: 1px solid #bababa;
+  padding: 20px;
+  position: relative;
+}
+.right-main .animated-section .bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.right-main .animated-section .marquee-wrapper {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+}
+.right-main .animated-section .marquee-wrapper:hover {
+  animation-play-state: paused;
+}
+.right-main .animated-section .marquee {
+  display: flex;
+  gap: 40px;
+}
+.right-main .animated-section .item {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  white-space: nowrap;
+}
+.right-main .animated-section .item span {
+  font-size: 25px;
+  font-weight: 700;
+}
+.right-main .animated-section .item svg {
+  fill: #5cff6f;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=style.css.map */
