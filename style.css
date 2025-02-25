@@ -1,0 +1,180 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #060606;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #fff;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 41px;
+  color: #fff;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #fff;
+}
+
+.buttons .btn1,
+.buttons .btn2 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #060606;
+  text-decoration: none;
+  border: none;
+  padding: 25px 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buttons .btn1 {
+  background-color: #5cff6f;
+  box-shadow: 2px 2px 0 #fff;
+}
+.buttons .btn1:hover {
+  background-color: #fff;
+  box-shadow: 5px 5px 0 #5cff6f;
+}
+.buttons .btn2 {
+  background-color: #fff;
+  box-shadow: 2px 2px 0 #5cff6f;
+}
+.buttons .btn2:hover {
+  background-color: #5cff6f;
+  box-shadow: 5px 5px 0 #fff;
+}
+.buttons:has(.btn1:hover) .btn2, .buttons:has(.btn2:hover) .btn1 {
+  transform: scale(0.5) rotate(10deg);
+  opacity: 0.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  overflow-x: hidden;
+}
+
+.left-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #060606;
+  border-right: 1px solid #bababa;
+  height: 100vh;
+  width: 350px;
+  text-align: center;
+}
+.left-fixed .logo {
+  padding: 64px 32px;
+  border-bottom: 1px solid #bababa;
+  cursor: pointer;
+}
+.left-fixed .logo:hover {
+  background-color: #161616;
+}
+.left-fixed .menu-container {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+.left-fixed .menu-container .menu-item {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #1c1c1c;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.left-fixed .menu-container .menu-item .icon {
+  background-color: #1c1c1c;
+  padding: 12px 22px;
+  transition: all 0.3s ease-in-out;
+}
+.left-fixed .menu-container .menu-item .icon svg {
+  transition: all 0.3s ease-in-out;
+}
+.left-fixed .menu-container .menu-item span {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+.left-fixed .menu-container .menu-item:hover span {
+  color: #5cff6f;
+}
+.left-fixed .menu-container .menu-item:hover .icon {
+  background-color: #5cff6f;
+}
+.left-fixed .menu-container .menu-item:hover .icon svg {
+  fill: #1c1c1c;
+}
+
+.right-main {
+  background-image: url(assets/Images/Hero\ Background.png);
+  min-height: 100vh;
+  width: calc(100% - 350px);
+  margin-left: auto;
+  display: flex;
+  padding: 0 10%;
+  align-items: center;
+}
+.right-main .hero {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.right-main .hero span {
+  color: #5cff6f;
+}
+.right-main .hero .buttons {
+  display: flex;
+  gap: 64px;
+  margin: 32px 0;
+}
+.right-main .hero .socials {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+.right-main .hero .socials .social-icon {
+  padding: 14px;
+  background-color: #060606;
+  border: 1px solid #bababa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.right-main .hero .socials .social-icon img {
+  width: 40px;
+  height: 40px;
+}
+.right-main .hero .socials .social-icon:hover {
+  background-color: #1c1c1c;
+}/*# sourceMappingURL=style.css.map */
