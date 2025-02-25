@@ -245,3 +245,68 @@ html body {
 		}
 	}
 }
+
+@media (max-width: 1630px) {
+	.right-main .about-section {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1150px) {
+	.right-main .hero-section .hero-content {
+		gap: 16px;
+	}
+	.buttons .btn1,
+	.buttons .btn2 {
+		font-size: 16px;
+		padding: 15px 40px;
+	}
+	.right-main .hero-section .socials {
+		gap: 32px;
+
+		.social-icon {
+			padding: 10px;
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+	.right-main .about-section {
+		gap: 64px;
+	}
+
+	.about-section .about-left-img img {
+		width: 350px;
+		height: auto;
+	}
+}
+
+@media (max-width: 870px) {
+	.left-fixed {
+		display: none;
+	}
+	.right-main {
+		width: 100%;
+		text-align: center;
+	}
+
+	.right-main .hero-section .hero-content {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.right-main .about-section .about-right-content a {
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 565px) {
+	.right-main .hero-section .buttons {
+		flex-direction: column;
+		gap: 32px;
+		margin: 16px 0;
+	}
+}

@@ -11,14 +11,14 @@ $menu-gray: #1c1c1c;
 $font-family: "Open Sans", sans-serif;
 
 // FONT SIZES
-$font-size-h1: 70px;
+$font-size-h1: clamp(35px, 5vw, 70px);
 $font-size-h2: 60px;
 $font-size-h3: 30px;
-$font-size-paragraph: 20px;
+$font-size-paragraph: clamp(16px, 2vw, 20px);
 $font-size-button: 20px;
 
 // LINE HEIGHT
-$line-height-h1: 80px;
+$line-height-h1: 1.2;
 $line-height-h2: 80px;
 $line-height-h3: 41px;
 $line-height-paragraph: 30px;
