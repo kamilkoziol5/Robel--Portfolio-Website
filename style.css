@@ -334,7 +334,7 @@ html body {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #0c0c0c;
+  background-color: #5cff6f;
   transition: all 0.6s ease;
 }
 .right-main .skills-section .skills-container li::after {
@@ -353,15 +353,12 @@ html body {
   transition: all 0.4s ease;
 }
 .right-main .skills-section .skills-container li:hover {
-  background-color: #e6e6e6;
+  background-color: #161616;
   box-shadow: 5px 5px 0 #5cff6f;
   color: #060606;
 }
 .right-main .skills-section .skills-container li:hover::before {
   border-color: #6d8bff;
-}
-.right-main .skills-section .skills-container li:hover h3 {
-  color: #060606;
 }
 .right-main .skills-section .skills-container li:hover h3::before {
   width: 100%;
@@ -467,6 +464,78 @@ html body {
 }
 .right-main .services-section .services-container .service-box:hover h3:before {
   width: 100%;
+}
+.right-main .portfolio-section {
+  text-align: center;
+}
+.right-main .portfolio-section h2 {
+  margin-bottom: 80px;
+}
+.right-main .portfolio-section span {
+  color: #5cff6f;
+}
+.right-main .portfolio-section .portfolio-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-img {
+  flex: 1;
+  max-width: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 32px;
+  flex: 1;
+  max-width: 50%;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-content h3 span {
+  color: #5cff6f;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-content p {
+  color: #71717a;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-content a {
+  padding: 16px 32px;
+  background-color: #5cff6f;
+  text-decoration: none;
+  color: #0c0c0c;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  box-shadow: 3px 3px 0 #fff;
+  transition: all 0.3s ease;
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-content a:hover {
+  background-color: #fff;
+  box-shadow: 3px 3px 0 #5cff6f;
+  transform: scale(0.95);
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:hover .portfolio-img {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:hover .portfolio-img img {
+  transform: scale(1.2);
 }
 
 @media (max-width: 1630px) {
