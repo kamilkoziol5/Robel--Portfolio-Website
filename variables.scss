@@ -12,8 +12,8 @@ $font-family: "Open Sans", sans-serif;
 
 // FONT SIZES
 $font-size-h1: clamp(35px, 5vw, 70px);
-$font-size-h2: 60px;
-$font-size-h3: 30px;
+$font-size-h2: clamp(32px, 4.3vw, 60px);
+$font-size-h3: clamp(24px, 2vw, 30px);
 $font-size-paragraph: clamp(16px, 2vw, 20px);
 $font-size-button: 20px;
 

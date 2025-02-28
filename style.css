@@ -12,14 +12,14 @@ h1 {
 }
 
 h2 {
-  font-size: 60px;
+  font-size: clamp(32px, 4.3vw, 60px);
   font-weight: 700;
   line-height: 80px;
   color: #fff;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: clamp(24px, 2vw, 30px);
   font-weight: 700;
   line-height: 41px;
   color: #fff;
@@ -385,7 +385,7 @@ html body {
 .right-main .services-section .services-container {
   display: flex;
   justify-content: space-between;
-  gap: 32px;
+  gap: 55px;
 }
 .right-main .services-section .services-container .service-box {
   background-color: #0c0c0c;
@@ -394,7 +394,8 @@ html body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px;
+  padding: 80px;
+  transition: all 0.3s ease;
   position: relative;
 }
 .right-main .services-section .services-container .service-box .icon-box {
@@ -408,15 +409,21 @@ html body {
   transform: rotate(45deg);
   position: absolute;
   top: -60px;
+  transition: all 0.3s ease;
 }
-.right-main .services-section .services-container .service-box .icon-box img {
+.right-main .services-section .services-container .service-box .icon-box svg {
   transform: rotate(-45deg);
   width: 70px;
   height: 50px;
 }
+.right-main .services-section .services-container .service-box .icon-box svg path {
+  fill: currentColor;
+  transition: all 0.4s ease;
+}
 .right-main .services-section .services-container .service-box h3 {
   position: relative;
   margin-bottom: 16px;
+  margin-top: 16px;
 }
 .right-main .services-section .services-container .service-box h3::before {
   content: "";
@@ -427,27 +434,50 @@ html body {
   height: 2px;
   transform: translateX(-50%);
   background-color: #5cff6f;
+  transition: all 0.3s ease;
 }
 .right-main .services-section .services-container .service-box .service-button {
-  padding: 16px 32px;
+  padding-right: 32px;
   background-color: #161616;
   margin-top: 32px;
   display: flex;
   align-items: center;
-  gap: 32px;
 }
 .right-main .services-section .services-container .service-box .service-button a {
+  padding: 16px 32px;
   text-decoration: none;
   font-size: clamp(16px, 2vw, 20px);
   font-weight: 300;
   line-height: 30px;
   color: #fff;
+  transition: all 0.3s ease;
+}
+.right-main .services-section .services-container .service-box .service-button a:hover {
+  color: #5cff6f;
+  margin-right: 16px;
+}
+.right-main .services-section .services-container .service-box:hover {
+  box-shadow: 5px 5px 0 #5cff6f;
+}
+.right-main .services-section .services-container .service-box:hover .icon-box {
+  background-color: #5cff6f;
+}
+.right-main .services-section .services-container .service-box:hover .icon-box svg path {
+  fill: #0c0c0c;
+}
+.right-main .services-section .services-container .service-box:hover h3:before {
+  width: 100%;
 }
 
 @media (max-width: 1630px) {
   .right-main .about-section {
     flex-direction: column;
     text-align: center;
+  }
+  .right-main .services-section .services-container {
+    flex-direction: column;
+    gap: 110px;
+    margin-top: 130px;
   }
 }
 @media (max-width: 1150px) {
@@ -485,6 +515,9 @@ html body {
     width: 100%;
     text-align: center;
   }
+  .right-main section {
+    padding: 50px 6%;
+  }
   .right-main .hero-section .hero-content {
     justify-content: center;
     align-items: center;
@@ -492,11 +525,38 @@ html body {
   .right-main .about-section .about-right-content a {
     margin-top: 32px;
   }
+  .right-main .skills-section {
+    margin-top: 0;
+  }
 }
 @media (max-width: 565px) {
   .right-main .hero-section .buttons {
     flex-direction: column;
     gap: 32px;
     margin: 16px 0;
+  }
+  .about-section .about-left-img img {
+    width: 250px;
+  }
+  .right-main .services-section h2 {
+    margin-bottom: 40px;
+  }
+  .right-main .services-section .services-container .service-box {
+    padding: 40px;
+  }
+  .right-main .services-section .services-container .service-box .icon-box {
+    width: 70px;
+    height: 70px;
+    top: -35px;
+  }
+  .right-main .services-section .services-container .service-box .icon-box svg {
+    width: 50px;
+    height: 30px;
+  }
+  .right-main .services-section .services-container .service-box .service-button a {
+    padding: 10px 16px;
+  }
+  .right-main .services-section .services-container .service-box .service-button {
+    padding-right: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
