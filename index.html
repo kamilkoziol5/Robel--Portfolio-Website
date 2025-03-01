@@ -336,13 +336,13 @@
             <h2>My <span>Portfolio</span></h2>
             <div class="portfolio-cards-container">
                 <div class="portfolio-card-row">
-                    <div class="portfolio-img"><img src="assets/Images/Portfolio1.png" alt=""></div>
+                    <div class="portfolio-img"><img src="assets/Images/Portfolio3 (2).png" alt=""></div>
                     <div class="portfolio-content">
                         <h3>Mini <span>Portfolio</span> Website</h3>
                         <p>I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                             unknown printer took a galley of type and scrambled it to specimen book.</p>
-                        <a href="#">See Website</a>
+                        <a href="https://kamilkoziol5.github.io/Portfolio-Front-End/" target="_blank">See Website</a>
                     </div>
                 </div>
                 <div class="portfolio-card-row">
@@ -351,12 +351,13 @@
                         <p>I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                             unknown printer took a galley of type and scrambled it to specimen book.</p>
-                        <a href="#">See Website</a>
+                        <a href="https://kamilkoziol5.github.io/Travel-Website-Full-Project/" target="_blank">See
+                            Website</a>
                     </div>
                     <div class="portfolio-img"><img src="assets/Images/Portfolio3 (1).png" alt=""></div>
                 </div>
                 <div class="portfolio-card-row">
-                    <div class="portfolio-img"><img src="assets/Images/Portfolio3 (2).png" alt=""></div>
+                    <div class="portfolio-img"><img src="assets/Images/Portfolio1.png" alt=""></div>
                     <div class="portfolio-content">
                         <h3>Landing <span>Guitar</span> Website</h3>
                         <p>I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -368,22 +369,23 @@
             </div>
         </section>
     </main>
-
     <script>
-        window.addEventListener('load', () => {
-            const scrollPosition = localStorage.getItem('scrollPosition');
-            if (scrollPosition) {
-                // Opóźniamy przewinięcie, aby upewnić się, że wszystkie zasoby są już załadowane
-                setTimeout(() => {
-                    window.scrollTo(0, parseInt(scrollPosition));
-                }, 100); // 100 ms opóźnienia
-            }
+        // Zapisuje pozycję scrolla przed zamknięciem strony
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('scrollPosition', window.scrollY);
         });
 
-
-
-
+        // Przywraca scroll tylko jeśli użytkownik wcześniej przewijał
+        window.addEventListener('load', () => {
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition !== null) {
+                setTimeout(() => {
+                    window.scrollTo(0, parseInt(scrollPosition));
+                }, 100);
+            }
+        });
     </script>
+
 </body>
 
 </html>
