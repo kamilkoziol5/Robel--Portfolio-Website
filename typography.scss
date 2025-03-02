@@ -53,9 +53,11 @@ p {
 		background-color: $accent-color;
 		box-shadow: 2px 2px 0 $text-color;
 
+		&:active,
 		&:hover {
 			background-color: $text-color;
 			box-shadow: 5px 5px 0 $accent-color;
+			transform: scale(0.95);
 		}
 	}
 
@@ -63,9 +65,11 @@ p {
 		background-color: $text-color;
 		box-shadow: 2px 2px 0 $accent-color;
 
+		&:active,
 		&:hover {
 			background-color: $accent-color;
 			box-shadow: 5px 5px 0 $text-color;
+			transform: scale(0.95);
 		}
 	}
 

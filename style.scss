@@ -1,6 +1,7 @@
 @import "variables";
 @import "typography";
 
+// Global Styles
 * {
 	margin: 0;
 	padding: 0;
@@ -87,6 +88,7 @@ html body {
 
 // RIGHT MAIN SIDE
 .right-main {
+	position: relative;
 	width: calc(100% - 350px);
 	margin-left: auto;
 	display: flex;
@@ -94,10 +96,43 @@ html body {
 	background-image: url(assets/Images/Hero\ Background.png);
 	background-position: top;
 	background-repeat: no-repeat;
-	padding-bottom: 100px;
+
 	section {
 		padding: 100px 8%;
-		max-width: 1420px;
+	}
+
+	// Arrow up Mobile
+	.arrow-up {
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 99999;
+
+		a {
+			background-color: $light-gray;
+			padding: 16px;
+			border: 1px solid $stroke-color;
+			transition: all 0.3s ease;
+			box-shadow: 0 0 16px rgba(255, 255, 255, 0.1);
+
+			svg {
+				transform: rotate(-90deg);
+				transition: all 0.3s ease;
+				width: 15px;
+				height: 15px;
+			}
+
+			&:active,
+			&:hover {
+				background-color: $background-color;
+
+				svg path {
+					fill: $accent-color;
+				}
+			}
+		}
 	}
 
 	// Hero Section
@@ -327,24 +362,28 @@ html body {
 					transition: all 0.4s ease;
 				}
 
+				&:active,
 				&:hover {
 					background-color: #161616;
 					box-shadow: 5px 5px 0 $accent-color;
 					color: #060606;
 				}
 
+				&:active::before,
 				&:hover::before {
 					border-color: #6d8bff;
 				}
 
+				&:active h3:before,
 				&:hover h3::before {
 					width: 100%;
 				}
 
+				&:active img,
 				&:hover img {
 					transform: scale(1.2);
 				}
-
+				&:active::after,
 				&:hover::after {
 					opacity: 1;
 					transform: rotate(135deg);
@@ -358,10 +397,10 @@ html body {
 		text-align: center;
 
 		h2 {
-			margin-bottom: 80px;
-		}
-		span {
-			color: $accent-color;
+			margin-bottom: 165px;
+			span {
+				color: $accent-color;
+			}
 		}
 
 		.services-container {
@@ -376,7 +415,7 @@ html body {
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				padding: 80px;
+				padding: 100px;
 				transition: all 0.3s ease;
 
 				position: relative;
@@ -428,6 +467,7 @@ html body {
 					padding-right: 32px;
 					background-color: $light-gray;
 					margin-top: 32px;
+					border: 1px solid $stroke-color;
 					display: flex;
 					align-items: center;
 
@@ -438,11 +478,25 @@ html body {
 						font-weight: 300;
 						line-height: 30px;
 						color: $text-color;
-						transition: all 0.3s ease;
 
+						&:active,
 						&:hover {
 							color: $accent-color;
+						}
+
+						span {
 							margin-right: 16px;
+							transition: all 0.3s ease;
+						}
+
+						&:active span,
+						&:hover span {
+							margin-right: 32px;
+						}
+
+						&:active svg path,
+						&:hover svg path {
+							fill: $accent-color;
 						}
 					}
 				}
@@ -537,13 +591,184 @@ html body {
 						}
 					}
 				}
-
+				&:active .portfolio-img,
 				&:hover .portfolio-img {
 					box-shadow: 5px 5px 0 $accent-color;
 				}
 
+				&:active .portfolio-img img,
 				&:hover .portfolio-img img {
 					transform: scale(1.2);
+				}
+			}
+		}
+	}
+
+	// Contact Section
+	.contact-section {
+		.title {
+			text-align: center;
+
+			h2 {
+				margin-bottom: 80px;
+			}
+		}
+
+		span {
+			color: $accent-color;
+		}
+
+		.contact-section-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: end;
+			gap: 64px;
+
+			.form {
+				flex: 1;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+
+				input {
+					padding: 20px;
+					border: 1px solid $stroke-color;
+					background-color: $background-color;
+					cursor: pointer;
+					outline: none;
+					font-size: 20px;
+					transition: all 0.3s ease;
+					color: $text-color;
+
+					::placeholder {
+						color: $light-gray;
+					}
+
+					&:focus,
+					&:active,
+					&:hover {
+						box-shadow: 3px 3px 0 $accent-color;
+						background-color: #060606;
+					}
+				}
+
+				textarea {
+					padding: 20px 20px 60px 20px;
+					border: 1px solid $stroke-color;
+					background-color: $background-color;
+					cursor: pointer;
+					outline: none;
+					font-size: 20px;
+					transition: all 0.3s ease;
+					resize: none;
+					color: $text-color;
+
+					::placeholder {
+						color: $light-gray;
+					}
+
+					&:focus,
+					&:active,
+					&:hover {
+						box-shadow: 3px 3px 0 $accent-color;
+						background-color: #060606;
+					}
+				}
+
+				.btn1 {
+					display: inline-block;
+					width: max-content;
+					font-size: 20px;
+					color: $background-color;
+					font-weight: 700;
+					line-height: 27px;
+					padding: 25px 60px;
+					cursor: pointer;
+					background-color: $accent-color;
+					box-shadow: 2px 2px 0 $text-color;
+					transition: all 0.3s ease;
+
+					&:active,
+					&:hover {
+						background-color: $text-color;
+						box-shadow: 5px 5px 0 $accent-color;
+						transform: scale(0.95);
+					}
+				}
+			}
+
+			.contact-right-content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
+
+				h3 {
+					text-align: start;
+				}
+
+				.contact-social-icons {
+					display: flex;
+					gap: 64px;
+
+					.social-icon {
+						padding: 14px;
+						background-color: $background-color;
+						border: 1px solid $stroke-color;
+						cursor: pointer;
+						transition: all 0.3s ease;
+
+						img {
+							width: 40px;
+							height: 40px;
+						}
+
+						&:active,
+						&:hover {
+							background-color: $menu-gray;
+							transform: scale(0.95);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Footer Section
+	.footer {
+		padding-bottom: 80px;
+
+		footer {
+			text-align: center;
+			font-weight: 900;
+
+			.footer-logo {
+				font-size: clamp(35px, 6vw, 110px);
+			}
+			span {
+				color: $accent-color;
+			}
+
+			.footer-content {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 64px;
+
+				a {
+					padding: 10px;
+					color: $accent-color;
+					text-underline-offset: 2px;
+					font-weight: 400;
+					transition: all 0.4s ease;
+
+					&:hover {
+						transform: scale(0.95);
+						box-shadow: 0 0 10px #5cff6f79;
+					}
 				}
 			}
 		}
@@ -559,6 +784,25 @@ html body {
 		flex-direction: column;
 		gap: 110px;
 		margin-top: 130px;
+	}
+
+	.right-main .contact-section .contact-section-container {
+		flex-direction: column;
+		align-items: center;
+
+		.form {
+			width: 100%;
+
+			form .btn1 {
+				align-self: center;
+			}
+		}
+	}
+	.right-main
+		.contact-section
+		.contact-section-container
+		.contact-right-content {
+		align-items: center;
 	}
 }
 
@@ -600,6 +844,7 @@ html body {
 	}
 	.right-main .hero-section .socials {
 		gap: 32px;
+		flex-wrap: wrap;
 
 		.social-icon {
 			padding: 10px;
@@ -630,6 +875,45 @@ html body {
 		padding: 12px 24px;
 		font-size: 16px;
 	}
+	.right-main .contact-section .title h2 {
+		margin-bottom: 40px;
+	}
+
+	.right-main .contact-section .contact-section-container form .btn1 {
+		font-size: 16px;
+		padding: 15px 40px;
+	}
+
+	.right-main
+		.contact-section
+		.contact-section-container
+		.contact-right-content
+		h3 {
+		text-align: center;
+	}
+
+	.right-main
+		.contact-section
+		.contact-section-container
+		.contact-right-content
+		.contact-social-icons {
+		gap: 32px;
+		flex-wrap: wrap;
+
+		.social-icon {
+			padding: 10px;
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	.right-main .footer footer .footer-content {
+		flex-direction: column;
+		gap: 32px;
+	}
 }
 
 @media (max-width: 870px) {
@@ -656,9 +940,18 @@ html body {
 	.right-main .skills-section {
 		margin-top: 0;
 	}
+	.right-main .arrow-up {
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 @media (max-width: 565px) {
+	.right-main {
+		background-image: url(assets/Images/Hero\ Background\ Mobile.png);
+		background-position: top left;
+	}
+
 	.right-main .hero-section .buttons {
 		flex-direction: column;
 		gap: 32px;

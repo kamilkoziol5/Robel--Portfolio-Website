@@ -49,17 +49,19 @@ p {
   background-color: #5cff6f;
   box-shadow: 2px 2px 0 #fff;
 }
-.buttons .btn1:hover {
+.buttons .btn1:active, .buttons .btn1:hover {
   background-color: #fff;
   box-shadow: 5px 5px 0 #5cff6f;
+  transform: scale(0.95);
 }
 .buttons .btn2 {
   background-color: #fff;
   box-shadow: 2px 2px 0 #5cff6f;
 }
-.buttons .btn2:hover {
+.buttons .btn2:active, .buttons .btn2:hover {
   background-color: #5cff6f;
   box-shadow: 5px 5px 0 #fff;
+  transform: scale(0.95);
 }
 .buttons:has(.btn1:hover) .btn2, .buttons:has(.btn2:hover) .btn1 {
   transform: scale(0.5) rotate(10deg);

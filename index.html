@@ -14,12 +14,13 @@
 
 <body>
     <!-- LEFT FIXED SIDE & MENU  -->
-
     <header class="left-fixed">
         <!-- Logo -->
-        <div class="logo">
-            <a href=""><img src="assets/Images/KKCODE - Logo.svg" alt=""></a>
-        </div>
+        <a href="#home">
+            <div class="logo">
+                <img src="assets/Images/KKCODE - Logo.svg" alt="">
+            </div>
+        </a>
 
         <!-- Menu -->
         <nav class="menu-container">
@@ -66,7 +67,7 @@
                 <span>Services</span>
             </a>
 
-            <a href="#" class="menu-item">
+            <a href="#portfolio" class="menu-item">
                 <div class="icon">
                     <svg width="29" height="34" viewBox="0 0 29 34" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +77,7 @@
                 </div>
                 <span>Portfolio</span>
             </a>
-            <a href="#" class="menu-item">
+            <a href="#contact" class="menu-item">
                 <div class="icon">
                     <svg width="29" height="34" viewBox="0 0 29 34" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
@@ -92,6 +93,17 @@
 
     <!-- RIGHT MAIN CONTENT -->
     <main class="right-main">
+
+        <!-- Arrow Scroll Up -->
+        <div class="arrow-up">
+            <a href="#home"> <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.133 1.10137C11.4009 0.845435 11.7642 0.70166 12.143 0.70166C12.5219 0.70166 12.8852 0.845435 13.1531 1.10137L19.5817 7.24471C19.8495 7.50072 20 7.8479 20 8.2099C20 8.5719 19.8495 8.91908 19.5817 9.17509L13.1531 15.3184C12.8836 15.5671 12.5228 15.7047 12.1482 15.7016C11.7736 15.6985 11.4153 15.5549 11.1504 15.3018C10.8856 15.0487 10.7353 14.7063 10.7321 14.3483C10.7288 13.9904 10.8728 13.6455 11.133 13.3881L15.0002 9.57509H1.42859C1.04971 9.57509 0.686338 9.43126 0.418425 9.17523C0.150512 8.91921 0 8.57197 0 8.2099C0 7.84783 0.150512 7.50059 0.418425 7.24457C0.686338 6.98855 1.04971 6.84471 1.42859 6.84471H15.0002L11.133 3.03174C10.8652 2.77573 10.7148 2.42856 10.7148 2.06656C10.7148 1.70456 10.8652 1.35738 11.133 1.10137Z"
+                        fill="#D7D7D7" />
+                </svg></a>
+        </div>
+
         <!-- Hero Section -->
         <section class="hero-section" id="home">
 
@@ -103,7 +115,7 @@
                     visually appealing and highly functional designs that provide seamless user experiences.</p>
                 <div class="buttons">
                     <a href="#" class="btn1">Download CV</a>
-                    <a href="#" class="btn2">Hire me!</a>
+                    <a href="#contact" class="btn2">Hire me!</a>
                 </div>
                 <div class="socials">
                     <div class="social-icon"><a href="mailto:kamilkoziol529@gmail.com" target="_blank"><img
@@ -238,7 +250,6 @@
             </div>
         </section>
 
-
         <!-- Skills Section -->
         <section class="skills-section" id="skills">
 
@@ -297,12 +308,15 @@
                     <h3>Web Design</h3>
                     <p>Clean, modern, and responsive websites that stand out.</p>
                     <div class="service-button">
-                        <a href="#">Discuss for Projects</a>
-                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.133 1.10137C11.4009 0.845435 11.7642 0.70166 12.143 0.70166C12.5219 0.70166 12.8852 0.845435 13.1531 1.10137L19.5817 7.24471C19.8495 7.50072 20 7.8479 20 8.2099C20 8.5719 19.8495 8.91908 19.5817 9.17509L13.1531 15.3184C12.8836 15.5671 12.5228 15.7047 12.1482 15.7016C11.7736 15.6985 11.4153 15.5549 11.1504 15.3018C10.8856 15.0487 10.7353 14.7063 10.7321 14.3483C10.7288 13.9904 10.8728 13.6455 11.133 13.3881L15.0002 9.57509H1.42859C1.04971 9.57509 0.686338 9.43126 0.418425 9.17523C0.150512 8.91921 0 8.57197 0 8.2099C0 7.84783 0.150512 7.50059 0.418425 7.24457C0.686338 6.98855 1.04971 6.84471 1.42859 6.84471H15.0002L11.133 3.03174C10.8652 2.77573 10.7148 2.42856 10.7148 2.06656C10.7148 1.70456 10.8652 1.35738 11.133 1.10137Z"
-                                fill="#D7D7D7" />
-                        </svg>
+                        <a href="#">
+                            <span>Discuss for Projects </span>
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.133 1.10137C11.4009 0.845435 11.7642 0.70166 12.143 0.70166C12.5219 0.70166 12.8852 0.845435 13.1531 1.10137L19.5817 7.24471C19.8495 7.50072 20 7.8479 20 8.2099C20 8.5719 19.8495 8.91908 19.5817 9.17509L13.1531 15.3184C12.8836 15.5671 12.5228 15.7047 12.1482 15.7016C11.7736 15.6985 11.4153 15.5549 11.1504 15.3018C10.8856 15.0487 10.7353 14.7063 10.7321 14.3483C10.7288 13.9904 10.8728 13.6455 11.133 13.3881L15.0002 9.57509H1.42859C1.04971 9.57509 0.686338 9.43126 0.418425 9.17523C0.150512 8.91921 0 8.57197 0 8.2099C0 7.84783 0.150512 7.50059 0.418425 7.24457C0.686338 6.98855 1.04971 6.84471 1.42859 6.84471H15.0002L11.133 3.03174C10.8652 2.77573 10.7148 2.42856 10.7148 2.06656C10.7148 1.70456 10.8652 1.35738 11.133 1.10137Z"
+                                    fill="#D7D7D7" />
+                            </svg>
+                        </a>
 
                     </div>
                 </div>
@@ -318,12 +332,15 @@
                     <h3>App Design</h3>
                     <p> Intuitive and sleek app interfaces for a seamless experience.</p>
                     <div class="service-button">
-                        <a href="#">Discuss for Projects</a>
-                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.133 1.10137C11.4009 0.845435 11.7642 0.70166 12.143 0.70166C12.5219 0.70166 12.8852 0.845435 13.1531 1.10137L19.5817 7.24471C19.8495 7.50072 20 7.8479 20 8.2099C20 8.5719 19.8495 8.91908 19.5817 9.17509L13.1531 15.3184C12.8836 15.5671 12.5228 15.7047 12.1482 15.7016C11.7736 15.6985 11.4153 15.5549 11.1504 15.3018C10.8856 15.0487 10.7353 14.7063 10.7321 14.3483C10.7288 13.9904 10.8728 13.6455 11.133 13.3881L15.0002 9.57509H1.42859C1.04971 9.57509 0.686338 9.43126 0.418425 9.17523C0.150512 8.91921 0 8.57197 0 8.2099C0 7.84783 0.150512 7.50059 0.418425 7.24457C0.686338 6.98855 1.04971 6.84471 1.42859 6.84471H15.0002L11.133 3.03174C10.8652 2.77573 10.7148 2.42856 10.7148 2.06656C10.7148 1.70456 10.8652 1.35738 11.133 1.10137Z"
-                                fill="#D7D7D7" />
-                        </svg>
+                        <a href="#">
+                            D<span>iscuss for Projects</span>
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.133 1.10137C11.4009 0.845435 11.7642 0.70166 12.143 0.70166C12.5219 0.70166 12.8852 0.845435 13.1531 1.10137L19.5817 7.24471C19.8495 7.50072 20 7.8479 20 8.2099C20 8.5719 19.8495 8.91908 19.5817 9.17509L13.1531 15.3184C12.8836 15.5671 12.5228 15.7047 12.1482 15.7016C11.7736 15.6985 11.4153 15.5549 11.1504 15.3018C10.8856 15.0487 10.7353 14.7063 10.7321 14.3483C10.7288 13.9904 10.8728 13.6455 11.133 13.3881L15.0002 9.57509H1.42859C1.04971 9.57509 0.686338 9.43126 0.418425 9.17523C0.150512 8.91921 0 8.57197 0 8.2099C0 7.84783 0.150512 7.50059 0.418425 7.24457C0.686338 6.98855 1.04971 6.84471 1.42859 6.84471H15.0002L11.133 3.03174C10.8652 2.77573 10.7148 2.42856 10.7148 2.06656C10.7148 1.70456 10.8652 1.35738 11.133 1.10137Z"
+                                    fill="#D7D7D7" />
+                            </svg>
+                        </a>
 
                     </div>
                 </div>
@@ -368,24 +385,50 @@
                 </div>
             </div>
         </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="title">
+                <h2>Let's <span>Talk</span></h2>
+            </div>
+            <div class="contact-section-container">
+                <div class="form">
+                    <form action="#">
+                        <input type="text" placeholder="Your name">
+                        <input type="email" placeholder="Your email" required>
+                        <input type="tel" placeholder="Your phone" pattern="^\+?[0-9]{7,15}$" required
+                            title="Enter a valid phone number (7-15 digits, optional + at the start)">
+                        <textarea placeholder="Your message"></textarea>
+                        <input type="submit" value="Send Message" class="btn1">
+                    </form>
+                </div>
+                <div class="contact-right-content">
+                    <h3>Find me on social media and drop a <span>message!</span></h3>
+                    <div class="contact-social-icons">
+                        <div class="social-icon"><a href="mailto:kamilkoziol529@gmail.com" target="_blank"><img
+                                    src="assets/Icons/GMAIL.svg" alt="email me"></a></div>
+                        <div class="social-icon"><a href="https://www.behance.net/kamilkozio2" target="_blank"><img
+                                    src="assets/Icons/BEHANCE.svg" alt=""></a></div>
+                        <div class="social-icon"><a href="https://dribbble.com/KamilKoziol" target="_blank"><img
+                                    src="assets/Icons/DRIBBBLE.svg" alt=""></a></div>
+                        <div class="social-icon"><a href="https://github.com/kamilkoziol5" target="_blank"><img
+                                    src="assets/Icons/GITHUB.svg" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer">
+            <footer>
+                <div class="footer-logo">KAMIL<span> KOZIOL</span></div>
+                <div class="footer-content">
+                    <p>© All Rights Reserved Kamil Koziol</p>
+                    <a href="#" target="_blank">Figma Project</a>
+                </div>
+            </footer>
+        </section>
     </main>
-    <script>
-        // Zapisuje pozycję scrolla przed zamknięciem strony
-        window.addEventListener('beforeunload', () => {
-            localStorage.setItem('scrollPosition', window.scrollY);
-        });
-
-        // Przywraca scroll tylko jeśli użytkownik wcześniej przewijał
-        window.addEventListener('load', () => {
-            const scrollPosition = localStorage.getItem('scrollPosition');
-            if (scrollPosition !== null) {
-                setTimeout(() => {
-                    window.scrollTo(0, parseInt(scrollPosition));
-                }, 100);
-            }
-        });
-    </script>
-
 </body>
 
 </html>

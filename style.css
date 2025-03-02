@@ -49,17 +49,19 @@ p {
   background-color: #5cff6f;
   box-shadow: 2px 2px 0 #fff;
 }
-.buttons .btn1:hover {
+.buttons .btn1:active, .buttons .btn1:hover {
   background-color: #fff;
   box-shadow: 5px 5px 0 #5cff6f;
+  transform: scale(0.95);
 }
 .buttons .btn2 {
   background-color: #fff;
   box-shadow: 2px 2px 0 #5cff6f;
 }
-.buttons .btn2:hover {
+.buttons .btn2:active, .buttons .btn2:hover {
   background-color: #5cff6f;
   box-shadow: 5px 5px 0 #fff;
+  transform: scale(0.95);
 }
 .buttons:has(.btn1:hover) .btn2, .buttons:has(.btn2:hover) .btn1 {
   transform: scale(0.5) rotate(10deg);
@@ -140,6 +142,7 @@ html body {
 }
 
 .right-main {
+  position: relative;
   width: calc(100% - 350px);
   margin-left: auto;
   display: flex;
@@ -147,11 +150,36 @@ html body {
   background-image: url(assets/Images/Hero\ Background.png);
   background-position: top;
   background-repeat: no-repeat;
-  padding-bottom: 100px;
 }
 .right-main section {
   padding: 100px 8%;
-  max-width: 1420px;
+}
+.right-main .arrow-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999;
+}
+.right-main .arrow-up a {
+  background-color: #161616;
+  padding: 16px;
+  border: 1px solid #bababa;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.1);
+}
+.right-main .arrow-up a svg {
+  transform: rotate(-90deg);
+  transition: all 0.3s ease;
+  width: 15px;
+  height: 15px;
+}
+.right-main .arrow-up a:active, .right-main .arrow-up a:hover {
+  background-color: #0c0c0c;
+}
+.right-main .arrow-up a:active svg path, .right-main .arrow-up a:hover svg path {
+  fill: #5cff6f;
 }
 .right-main .hero-section {
   width: 100%;
@@ -352,21 +380,21 @@ html body {
   transform: scale(0.4);
   transition: all 0.4s ease;
 }
-.right-main .skills-section .skills-container li:hover {
+.right-main .skills-section .skills-container li:active, .right-main .skills-section .skills-container li:hover {
   background-color: #161616;
   box-shadow: 5px 5px 0 #5cff6f;
   color: #060606;
 }
-.right-main .skills-section .skills-container li:hover::before {
+.right-main .skills-section .skills-container li:active::before, .right-main .skills-section .skills-container li:hover::before {
   border-color: #6d8bff;
 }
-.right-main .skills-section .skills-container li:hover h3::before {
+.right-main .skills-section .skills-container li:active h3:before, .right-main .skills-section .skills-container li:hover h3::before {
   width: 100%;
 }
-.right-main .skills-section .skills-container li:hover img {
+.right-main .skills-section .skills-container li:active img, .right-main .skills-section .skills-container li:hover img {
   transform: scale(1.2);
 }
-.right-main .skills-section .skills-container li:hover::after {
+.right-main .skills-section .skills-container li:active::after, .right-main .skills-section .skills-container li:hover::after {
   opacity: 1;
   transform: rotate(135deg);
 }
@@ -374,9 +402,9 @@ html body {
   text-align: center;
 }
 .right-main .services-section h2 {
-  margin-bottom: 80px;
+  margin-bottom: 165px;
 }
-.right-main .services-section span {
+.right-main .services-section h2 span {
   color: #5cff6f;
 }
 .right-main .services-section .services-container {
@@ -391,7 +419,7 @@ html body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px;
+  padding: 100px;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -437,6 +465,7 @@ html body {
   padding-right: 32px;
   background-color: #161616;
   margin-top: 32px;
+  border: 1px solid #bababa;
   display: flex;
   align-items: center;
 }
@@ -447,11 +476,19 @@ html body {
   font-weight: 300;
   line-height: 30px;
   color: #fff;
+}
+.right-main .services-section .services-container .service-box .service-button a:active, .right-main .services-section .services-container .service-box .service-button a:hover {
+  color: #5cff6f;
+}
+.right-main .services-section .services-container .service-box .service-button a span {
+  margin-right: 16px;
   transition: all 0.3s ease;
 }
-.right-main .services-section .services-container .service-box .service-button a:hover {
-  color: #5cff6f;
-  margin-right: 16px;
+.right-main .services-section .services-container .service-box .service-button a:active span, .right-main .services-section .services-container .service-box .service-button a:hover span {
+  margin-right: 32px;
+}
+.right-main .services-section .services-container .service-box .service-button a:active svg path, .right-main .services-section .services-container .service-box .service-button a:hover svg path {
+  fill: #5cff6f;
 }
 .right-main .services-section .services-container .service-box:hover {
   box-shadow: 5px 5px 0 #5cff6f;
@@ -531,11 +568,152 @@ html body {
   box-shadow: 3px 3px 0 #5cff6f;
   transform: scale(0.95);
 }
-.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:hover .portfolio-img {
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:active .portfolio-img, .right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:hover .portfolio-img {
   box-shadow: 5px 5px 0 #5cff6f;
 }
-.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:hover .portfolio-img img {
+.right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:active .portfolio-img img, .right-main .portfolio-section .portfolio-cards-container .portfolio-card-row:hover .portfolio-img img {
   transform: scale(1.2);
+}
+.right-main .contact-section .title {
+  text-align: center;
+}
+.right-main .contact-section .title h2 {
+  margin-bottom: 80px;
+}
+.right-main .contact-section span {
+  color: #5cff6f;
+}
+.right-main .contact-section .contact-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 64px;
+}
+.right-main .contact-section .contact-section-container .form {
+  flex: 1;
+}
+.right-main .contact-section .contact-section-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.right-main .contact-section .contact-section-container form input {
+  padding: 20px;
+  border: 1px solid #bababa;
+  background-color: #0c0c0c;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.right-main .contact-section .contact-section-container form input ::-moz-placeholder {
+  color: #161616;
+}
+.right-main .contact-section .contact-section-container form input ::placeholder {
+  color: #161616;
+}
+.right-main .contact-section .contact-section-container form input:focus, .right-main .contact-section .contact-section-container form input:active, .right-main .contact-section .contact-section-container form input:hover {
+  box-shadow: 3px 3px 0 #5cff6f;
+  background-color: #060606;
+}
+.right-main .contact-section .contact-section-container form textarea {
+  padding: 20px 20px 60px 20px;
+  border: 1px solid #bababa;
+  background-color: #0c0c0c;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  resize: none;
+  color: #fff;
+}
+.right-main .contact-section .contact-section-container form textarea ::-moz-placeholder {
+  color: #161616;
+}
+.right-main .contact-section .contact-section-container form textarea ::placeholder {
+  color: #161616;
+}
+.right-main .contact-section .contact-section-container form textarea:focus, .right-main .contact-section .contact-section-container form textarea:active, .right-main .contact-section .contact-section-container form textarea:hover {
+  box-shadow: 3px 3px 0 #5cff6f;
+  background-color: #060606;
+}
+.right-main .contact-section .contact-section-container form .btn1 {
+  display: inline-block;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  color: #0c0c0c;
+  font-weight: 700;
+  line-height: 27px;
+  padding: 25px 60px;
+  cursor: pointer;
+  background-color: #5cff6f;
+  box-shadow: 2px 2px 0 #fff;
+  transition: all 0.3s ease;
+}
+.right-main .contact-section .contact-section-container form .btn1:active, .right-main .contact-section .contact-section-container form .btn1:hover {
+  background-color: #fff;
+  box-shadow: 5px 5px 0 #5cff6f;
+  transform: scale(0.95);
+}
+.right-main .contact-section .contact-section-container .contact-right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.right-main .contact-section .contact-section-container .contact-right-content h3 {
+  text-align: start;
+}
+.right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons {
+  display: flex;
+  gap: 64px;
+}
+.right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons .social-icon {
+  padding: 14px;
+  background-color: #0c0c0c;
+  border: 1px solid #bababa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons .social-icon img {
+  width: 40px;
+  height: 40px;
+}
+.right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons .social-icon:active, .right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons .social-icon:hover {
+  background-color: #1c1c1c;
+  transform: scale(0.95);
+}
+.right-main .footer {
+  padding-bottom: 80px;
+}
+.right-main .footer footer {
+  text-align: center;
+  font-weight: 900;
+}
+.right-main .footer footer .footer-logo {
+  font-size: clamp(35px, 6vw, 110px);
+}
+.right-main .footer footer span {
+  color: #5cff6f;
+}
+.right-main .footer footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+.right-main .footer footer .footer-content a {
+  padding: 10px;
+  color: #5cff6f;
+  text-underline-offset: 2px;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+.right-main .footer footer .footer-content a:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(92, 255, 111, 0.4745098039);
 }
 
 @media (max-width: 1630px) {
@@ -547,6 +725,19 @@ html body {
     flex-direction: column;
     gap: 110px;
     margin-top: 130px;
+  }
+  .right-main .contact-section .contact-section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-main .contact-section .contact-section-container .form {
+    width: 100%;
+  }
+  .right-main .contact-section .contact-section-container .form form .btn1 {
+    align-self: center;
+  }
+  .right-main .contact-section .contact-section-container .contact-right-content {
+    align-items: center;
   }
 }
 @media (max-width: 1400px) {
@@ -580,6 +771,7 @@ html body {
   }
   .right-main .hero-section .socials {
     gap: 32px;
+    flex-wrap: wrap;
   }
   .right-main .hero-section .socials .social-icon {
     padding: 10px;
@@ -601,6 +793,31 @@ html body {
   .right-main .portfolio-section .portfolio-cards-container .portfolio-card-row .portfolio-content a {
     padding: 12px 24px;
     font-size: 16px;
+  }
+  .right-main .contact-section .title h2 {
+    margin-bottom: 40px;
+  }
+  .right-main .contact-section .contact-section-container form .btn1 {
+    font-size: 16px;
+    padding: 15px 40px;
+  }
+  .right-main .contact-section .contact-section-container .contact-right-content h3 {
+    text-align: center;
+  }
+  .right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons {
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons .social-icon {
+    padding: 10px;
+  }
+  .right-main .contact-section .contact-section-container .contact-right-content .contact-social-icons .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  .right-main .footer footer .footer-content {
+    flex-direction: column;
+    gap: 32px;
   }
 }
 @media (max-width: 870px) {
@@ -624,8 +841,16 @@ html body {
   .right-main .skills-section {
     margin-top: 0;
   }
+  .right-main .arrow-up {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 @media (max-width: 565px) {
+  .right-main {
+    background-image: url(assets/Images/Hero\ Background\ Mobile.png);
+    background-position: top left;
+  }
   .right-main .hero-section .buttons {
     flex-direction: column;
     gap: 32px;
